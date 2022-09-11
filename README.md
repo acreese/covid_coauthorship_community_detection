@@ -52,6 +52,26 @@ The membership of each node is recorded in a dictionary with node keys and commu
 
 ![Infomap example community structure](assets/infomap_sample_community.png)
 
+### GraphSAGE node embedding
+
+GraphSAGE node embedding is performed with the StellarGraph package, meaning the network must be rendered as a StellarGraph graph object. To do this requires some more slight data transformations. The DataFrame edge list can be used to store edge data, but all node attributes must be purged, and the columns containing author and coauthor identifiers must be explicitly renamed “source” and “target,” respectively. Node data takes the form of a node list derived from the refined author list. StellarGraph cannot handle non-numerical data so the string-based name and country attributes must be purged,
+leaving only each author’s number of coronavirus publications. In future iterations of this process, country data could be rendered as coordinates, preserving geographic location as a node attribute.
+
+Once the StellarGraph object is rendered from node and edge data, the process of applying unsupervised GraphSAGE node embedding can be initiated. It begins with the of the optional parameter values: root nodes, the number of walks to take per node, the length of each walk, and random seed. The UnsupervisedSampler instance is then created with the relevant parameters passed to it. The node pair generator is then created with specified parameters for the minibatch size, the number of epochs for training the model, and the sizes of 1- and 2-hop neighbor sample. The 2-layer GraphSAGE encoder is then built with specified layer sizes, a bias term, and dropout designation. To that is added a link_classificaiton layer. Then the GraphSAGE encoder and prediction layer are stacked into a Keras model, specifying the loss, and, finally, the model is trained. The resulting node embeddings are extracted by building a new node-based model and feeding all nodes into it.
+
+### t-SNE embedding and visualization
+
+The shape attribute of the node embeddings (260637, 50) reveals they have 50 dimensions, which must be reduced down to two (2) using t-SNE. These node embeddings can then be plotted in a scatterplot with matplotlib, adjusting alpha and size, to reveal the chart in Figure 3. One can see both instances of tightly clustered, nearly perfectly overlapping nodes as well as areas of loose clusters (or clouds).
+Figure 3. t-SNE enabled visualization of GraphSAGE node embedding clusters
+
+![t-SNE-enabled visualization of GraphSAGE embeddings](assets/graphsage_clusters.png)
+ 
+### Comparing communities 
+
+The same chart can then be plotted with Infomap community membership applied to color, to see whether GraphSAGE embeddings do in fact separate the Infomap communities.
+
+![t-SNE-enabled visualization of GraphSAGE embeddings with Informap colorization](assets/graphsage_clusters_infomap_colors.png)
+
 ### Future Work
 
 Enhancing the dection of these scientific authorship communities would invole the consideration of more feautres - information about both papers and authors – i.e. language of publication, citation information, etc. 
