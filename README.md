@@ -71,7 +71,3 @@ Figure 3. t-SNE enabled visualization of GraphSAGE node embedding clusters
 The same chart can then be plotted with Infomap community membership applied to color, to see whether GraphSAGE embeddings do in fact separate the Infomap communities.
 
 ![t-SNE-enabled visualization of GraphSAGE embeddings with Informap colorization](assets/graphsage_clusters_infomap_colors.png)
-
-### Future Work
-
-Enhancing the dection of these scientific authorship communities would invole the consideration of more feautres - information about both papers and authors – i.e. language of publication, citation information, etc. 
