@@ -50,6 +50,8 @@ The NetworkX graph can then easily be converted to an iGraph graph object, and I
 
 One can then store the membership of each node, creating a dictionary with node keys and community id values. This dictionary will be used later to color the t-SNE plot of GraphSAGE embeddings to visually compare the clustering methods. This dictionary of Infomap community membership can also be applied back to the NetworkX graph object as a node attribute. A single community “subgraph” of a nodes can then be selected, extracted, and visualized using NetworkX, showing nodes with designated labels and their connections to one another, as seen in Figure 2. However, the nodes are positioned randomly; their proximity to one another is not informed by network structure or attributes.
 
+![Infomap example community structure](assets/infomap_sample_community.png)
+
 ### Future Work
 
 Enhancing the dection of these scientific authorship communities would invole the consideration of more feautres - information about both papers and authors – i.e. language of publication, citation information, etc. 
