@@ -17,6 +17,10 @@ Since the emergence of the COVID-19 coronavirus in late 2019, scientific researc
 
 This project compares the process and outputs of two different community detection methods on a newtwork graph: [Infomap](https://www.mapequation.org/infomap/) clustering and unsupervised [GaphSAGE](https://snap.stanford.edu/graphsage/) node embeddings using [t-SNE](https://lvdmaaten.github.io/tsne/) dimensionality reduction on a homogenous, undirected network graph of scientific authorship and collaboration. It is shown that the underlying algorithms produce qualitatively different results and insights into the organization of a system.
 
+<details>
+<summary>Project Details</summary>
+<br>
+
 ## Data Set: LitCovid
 
 https://www.ncbi.nlm.nih.gov/research/coronavirus/
@@ -71,3 +75,5 @@ Figure 3. t-SNE enabled visualization of GraphSAGE node embedding clusters
 The same chart can then be plotted with Infomap community membership applied to color, to see whether GraphSAGE embeddings do in fact separate the Infomap communities.
 
 ![t-SNE-enabled visualization of GraphSAGE embeddings with Informap colorization](assets/graphsage_clusters_infomap_colors.png)
+
+</details>
