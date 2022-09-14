@@ -17,8 +17,9 @@ Since the emergence of the COVID-19 coronavirus in late 2019, scientific researc
 
 This project compares the process and outputs of two different community detection methods on a newtwork graph: [Infomap](https://www.mapequation.org/infomap/) clustering and unsupervised [GaphSAGE](https://snap.stanford.edu/graphsage/) node embeddings using [t-SNE](https://lvdmaaten.github.io/tsne/) dimensionality reduction on a homogenous, undirected network graph of scientific authorship and collaboration. It is shown that the underlying algorithms produce qualitatively different results and insights into the organization of a system.
 
+## Project Details
 <details>
-<summary>Project Details</summary>
+<summary>show/hide</summary>
 <br>
 
 ## Data Set: LitCovid
