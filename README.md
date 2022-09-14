@@ -1,21 +1,18 @@
-# covid-coauthorship-network
+# COVID Coauthorship Network Creation and Community Detection
 
-## Overview
+This project compares (both visually and quantitatively) the process and outputs of two different community detection methods on a newtwork graph: [Infomap](https://www.mapequation.org/infomap/) clustering and unsupervised [GaphSAGE](https://snap.stanford.edu/graphsage/) node embeddings using [t-SNE](https://lvdmaaten.github.io/tsne/) dimensionality reduction on a homogenous, undirected network graph of scientific authorship and collaboration. It is shown that the underlying algorithms produce qualitatively different results and insights into the organization of a system.
 
-This repository contains project work for UT Austin's Dr. Ying Ding. It uses from data from the [LitCovid](https://www.ncbi.nlm.nih.gov/research/coronavirus/) (Chen Q, Allot A, Lu Z. "Keep up with the latest coronavirus research". *Nature*. 2020;579(7798):193) and the [PubMed Knowledge Graph](http://er.tacc.utexas.edu/datasets/ped) (Xu J, Kim S, Song M, et al. "Building a PubMed knowledge graph." *Sci Data*. 2020 Jun 26;7(1):205). The manipulation of this data and the application of these algorithms was done entirely in Python using Jupyter Notebooks. 
+Data comes from the [LitCovid](https://www.ncbi.nlm.nih.gov/research/coronavirus/) (Chen Q, Allot A, Lu Z. "Keep up with the latest coronavirus research". *Nature*. 2020;579(7798):193) and the [PubMed Knowledge Graph](http://er.tacc.utexas.edu/datasets/ped) (Xu J, Kim S, Song M, et al. "Building a PubMed knowledge graph." *Sci Data*. 2020 Jun 26;7(1):205). 
 
-### Contibutors
+## Objective
 
-- Alexander Reese
-- Redoan Rahman
+This repo grew out of graduate project work for Dr. Ying Ding at the University of Texas at Austin.
+
+Most of this data engineering and wrangling is coded with Python inside Jupyter Notebooks. Directories will include datasets and code files. Notebooks include notes and comments walking through different steps of data wranling, analysis, and modeling.
 
 ## Problem Statement
 
 Since the emergence of the COVID-19 coronavirus in late 2019, scientific research into and, accordingly, publication on COVID-19 (and other coronaviruses) has skyrocketed and taken center stage in many medical and scientific subfields and research communities. An analysis of this data offers computational social sciences a chance to observe the quick emergence and evolution of a scholarly network.
-
-## Project Summary
-
-This project compares the process and outputs of two different community detection methods on a newtwork graph: [Infomap](https://www.mapequation.org/infomap/) clustering and unsupervised [GaphSAGE](https://snap.stanford.edu/graphsage/) node embeddings using [t-SNE](https://lvdmaaten.github.io/tsne/) dimensionality reduction on a homogenous, undirected network graph of scientific authorship and collaboration. It is shown that the underlying algorithms produce qualitatively different results and insights into the organization of a system.
 
 ## Project Details
 <details>
